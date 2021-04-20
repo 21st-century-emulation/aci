@@ -25,7 +25,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: "${{ secrets.GHCR_TOKEN }}"
+          password: "${{ secrets.GITHUB_TOKEN }}"
 
       # Push to Github Container Registry
       - name: Pushing Image to Github Container Registry
