@@ -38,7 +38,7 @@ struct Cpu {
 async fn execute(query_string: HashMap<String, String>, mut cpu: Cpu) -> Result<impl warp::Reply, warp::Rejection> {
     cpu.state.cycles += 7;
 
-    let operand = match query_string.get("operand") {
+    let operand = match query_string.get("operand1") {
         Some(x) => match x.parse::<u8>() {
             Ok(y) => y,
             _ => panic!("Invalid operand, not u8")
