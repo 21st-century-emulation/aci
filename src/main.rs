@@ -32,6 +32,7 @@ struct CpuState {
 #[derive(Deserialize, Serialize)]
 struct Cpu {
     state: CpuState,
+    id: String,
     opcode: u8
 }
 
